@@ -20,6 +20,7 @@ type CustomStack struct {
 
 func Constructor(maxSize int) CustomStack {
 
+	return CustomStack{}
 }
 
 func (cs *CustomStack) Push(x int) {
@@ -27,7 +28,7 @@ func (cs *CustomStack) Push(x int) {
 }
 
 func (cs *CustomStack) Pop() int {
-
+	return 0
 }
 
 func (cs *CustomStack) Increment(k int, val int) {
