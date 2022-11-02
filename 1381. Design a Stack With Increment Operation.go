@@ -20,7 +20,7 @@ type CustomStack struct {
 	maxSize int
 }
 
-func Constructor(maxSize int) CustomStack {
+func New(maxSize int) CustomStack {
 
 	return CustomStack{
 		s:       make([]int, 0, maxSize),
