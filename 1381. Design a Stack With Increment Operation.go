@@ -29,29 +29,28 @@ func New(maxSize int) CustomStack {
 }
 
 func (cs *CustomStack) Push(x int) {
-	if len(cs.s) == cap(cs.s) {
-		return
+	if len(cs.s) < cap(cs.s) {
+		cs.s = append(cs.s, x)
 	}
-	cs.s = append(cs.s, x)
 }
 
 func (cs *CustomStack) Pop() int {
 	if len(cs.s) == 0 {
 		return -1
 	}
+	var x int
 
-	x := cs.s[len(cs.s)-1]
-
-	cs.s = cs.s[:len(cs.s)-1]
+	x, cs.s = cs.s[len(cs.s)-1], cs.s[:len(cs.s)-1]
 
 	return x
 }
 
 func (cs *CustomStack) Increment(k int, val int) {
-	from := len(cs.s) - 1
-	to := from - k
+	if k > len(cs.s) {
+		k = len(cs.s)
+	}
 
-	for i := from; i >= to && i >= 0; i-- {
+	for i := 0; i < k; i++ {
 		cs.s[i] += val
 	}
 }
