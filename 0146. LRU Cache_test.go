@@ -8,7 +8,6 @@ import (
 // [    [2],   [1,0],[2,2],[1],  [3,3],[2],  [4,4],[1],   [3],  [4]]
 // [null,null,null,0,null,-1,null,-1,3,4]
 func TestLRUCache(t *testing.T) {
-
 	c := Constructor(2)
 	c.Put(1, 0)
 	c.Put(2, 2)
@@ -39,5 +38,4 @@ func TestLRUCache(t *testing.T) {
 			t.Errorf("Get() = %v, want %v", got, 3)
 		}
 	})
-
 }

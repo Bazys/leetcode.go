@@ -21,7 +21,6 @@ type CustomStack struct {
 }
 
 func New(maxSize int) CustomStack {
-
 	return CustomStack{
 		s:       make([]int, 0, maxSize),
 		maxSize: maxSize,
@@ -45,7 +44,7 @@ func (cs *CustomStack) Pop() int {
 	return x
 }
 
-func (cs *CustomStack) Increment(k int, val int) {
+func (cs *CustomStack) Increment(k, val int) {
 	if k > len(cs.s) {
 		k = len(cs.s)
 	}

@@ -5,7 +5,7 @@ import "testing"
 // ["MinStack","push","push","push","getMin","pop","top","getMin"]
 // [[],[-2],[0],[-3],[],[],[],[]]
 func TestMinStack1(t *testing.T) {
-	var minStack = NewMinStack()
+	minStack := NewMinStack()
 	minStack.Push(-2)
 	minStack.Push(0)
 	minStack.Push(-3)
@@ -30,7 +30,7 @@ func TestMinStack1(t *testing.T) {
 // ["MinStack","push","push","push","getMin","pop","pop","top","getMin"]
 // [[],[5],[3],[4],[],[],[],[],[]]
 func TestMinStack2(t *testing.T) {
-	var minStack = NewMinStack()
+	minStack := NewMinStack()
 	minStack.Push(5)
 	minStack.Push(3)
 	minStack.Push(4)

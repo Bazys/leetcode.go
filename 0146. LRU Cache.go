@@ -39,7 +39,7 @@ func (c *LRUCache) purge() {
 	}
 }
 
-func (c *LRUCache) Put(key int, value int) {
+func (c *LRUCache) Put(key, value int) {
 	if element, exists := c.items[key]; exists == true {
 		c.queue.MoveToFront(element)
 		element.Value.(*Item).Value = value

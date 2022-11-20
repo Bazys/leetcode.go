@@ -8,7 +8,8 @@ type Trie struct {
 func NewTrie() Trie {
 	return Trie{
 		next:   make(map[int32]*Trie),
-		isLeaf: false}
+		isLeaf: false,
+	}
 }
 
 func (t *Trie) Insert(word string) {

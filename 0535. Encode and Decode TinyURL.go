@@ -26,7 +26,6 @@ func NewCodec() Codec {
 		base: make(map[string]string),
 		seq:  0,
 	}
-
 }
 
 func (c *Codec) Encode(longUrl string) string {
@@ -40,7 +39,6 @@ func (c *Codec) Encode(longUrl string) string {
 
 func (c *Codec) Decode(shortUrl string) string {
 	return c.base[shortUrl]
-
 }
 
 func (Codec) toBase62(num int64) string {

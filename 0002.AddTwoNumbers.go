@@ -1,6 +1,6 @@
 package leetcode
 
-func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
+func addTwoNumbers(l1, l2 *ListNode) *ListNode {
 	ret := new(ListNode)
 	cur := ret
 	add := 0

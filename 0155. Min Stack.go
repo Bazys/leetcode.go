@@ -34,7 +34,6 @@ func NewMinStack() MinStack {
 func (s *MinStack) Push(val int) {
 	s.stack = append(s.stack, val)
 	heap.Push(s.queue, val)
-
 }
 
 func (s *MinStack) Pop() {
